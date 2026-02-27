@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haruy Sushi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Starbucks Coffee</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="https://em-content.zobj.net/source/apple/81/sushi_1f363.png">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        barlow: ['Barlow', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
                     },
-                    colors: {
-                        primary: '#ca3c3f'
+                    keyframes: {
+                        flutuar: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-40px)' },
+                        }
+                    },
+                    animation: {
+                        flutuar: 'flutuar 3s ease-in-out infinite',
                     }
                 }
             }
         }
     </script>
 </head>
+<body class="text-[#222222] m-0 font-poppins w-full bg-white">
 
-<body class="font-barlow text-gray-800">
+    <header class="w-auto text-center p-0 mt-20">
+        <img src="assets/images/logo.png" alt="Starbucks Coffee" class="inline-block">                    
+        <nav class="w-auto text-center font-bold">
+            <ul class="list-none p-0">
+                <li class="inline-block px-5">
+                    <a href="#cardapio" class="no-underline text-[#222222] hover:text-[#0d6e00] transition-colors duration-200">CARDÁPIO</a>
+                </li>    
+            </ul>            
+        </nav>
 
-    <!-- ================= HEADER ================= -->
-    <header class="flex items-center justify-between px-6 mt-[5vh]">
-
-        <figure>
-            <img src="./assets/images/logo.png" alt="Logo Haruy Sushi" class="w-[30vw] max-w-[160px]">
-        </figure>
-
-        <!-- Botão hamburguer -->
+        <!-- menu hamburguer -->
         <button id="menuBtn" class="md:hidden text-3xl">
             ☰
         </button>
-
-        <!-- Menu Desktop -->
-        <nav class="hidden md:block">
-            <ul class="flex gap-8 text-lg">
-                <li><a href="#cardapio" class="hover:text-primary transition font-semibold">Cardápio</a></li>
-                <li><a href="#contato" class="hover:text-primary transition font-semibold">Contato</a></li>
-            </ul>
-        </nav>
-
     </header>
 
     <!-- Menu Mobile -->
@@ -58,209 +61,170 @@
 
         <ul class="flex flex-col gap-6 text-lg">
             <li><a href="#cardapio" class="hover:text-primary">Cardápio</a></li>
-            <li><a href="#contato" class="hover:text-primary">Contato</a></li>
         </ul>
 
     </div>
 
-    <!-- ================= BANNER ================= -->
-    <section class="text-center p-8">
-
-        <div class="md:flex md:items-center md:justify-center md:gap-10">
-
-            <article class="md:w-[45%]">
-
-                <h1 class="text-2xl md:text-4xl font-semibold">
-                    O verdadeiro sabor da cozinha japonesa
-                </h1>
-
-                <a href="#cardapio"
-                    class="inline-block mt-4 px-8 py-4 border border-gray-800 rounded-[3rem] text-lg min-h-[48px] hover:bg-primary hover:text-white transition">
-                    Veja o Cardápio
-                </a>
-
-            </article>
-
-            <figure class="md:w-[45%] mt-6 md:mt-0">
-                <img src="./assets/images/banner.png" alt="Prato japonês" class="w-[90%] mx-auto">
-            </figure>
-
+    <section class="w-full text-center mt-8">
+        <div class="inline-block align-middle w-[30%] max-[900px]:w-full max-[900px]:mb-[1.875rem]">
+            <p class="text-[2.5rem] text-left px-[10%] max-[900px]:text-[1.625rem] max-[900px]:text-center max-[900px]:px-[5%]">O verdadeiro sabor do café!</p>
+            <p class="text-[2.5rem] text-left px-[10%] max-[900px]:text-[1.625rem] max-[900px]:text-center max-[900px]:px-[5%] mt-4">
+                <a class="bg-[#a7c4a3] rounded-[2.5rem] p-[3%] text-[1.25rem] no-underline text-[#222222] hover:text-[#0d6e00] transition-colors duration-200 inline-block" href="#cardapio">VEJA O CARDÁPIO</a>
+            </p>
         </div>
-
+        <div class="inline-block align-middle w-[30%] max-[900px]:w-full max-[900px]:mb-[1.875rem]">
+            <img class="w-[90%] !w-[40%] min-w-[200px] animate-flutuar mx-auto" src="assets/images/img1.png" alt="Café">
+        </div>
     </section>
 
-    <!-- ================= CARDÁPIO ================= -->
-    <section id="cardapio" class="max-w-[90vw] mx-auto mt-[5vh] p-8">
+    <section id="cardapio" class="box-border border-t border-dashed border-[#999999] max-w-[43.75rem] mx-auto mt-[6.25rem] p-4 text-center">
 
-        <h2 class="text-3xl font-bold text-center mb-8">
+        <h1 class="text-[2em] font-bold mt-[1em] mb-[0.67em]">
             Cardápio
-        </h2>
+        </h1>
 
-        <!-- menu categoria inicio-->
-        <nav id="nav-categorias" class="overflow-x-auto whitespace-nowrap snap-x flex gap-2 mt-6 pb-1">
-            <button data-cat="sushis"
-                class="snap-start px-4 py-1 rounded-full bg-primary text-white font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
-                Sushi
+        <nav id="nav-categorias" class="overflow-x-auto whitespace-nowrap snap-x flex justify-center gap-2 mt-6 pb-2">
+            <button data-cat="cafes"
+                class="snap-start px-6 py-2 rounded-full bg-[#063600] text-white font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
+                Cafés
             </button>
-            <button data-cat="temakis"
-                class="snap-start px-4 py-1 rounded-full bg-primary text-white font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
-                Temakis
-            </button>
-            <button data-cat="bebidas"
-                class="snap-start px-4 py-1 rounded-full bg-primary text-white font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
-                Bebidas
-            </button>
-            <button data-cat="sobremesas"
-                class="snap-start px-4 py-1 rounded-full bg-primary text-white font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
-                Sobremesas
+            <button data-cat="frappuccinos"
+                class="snap-start px-6 py-2 rounded-full bg-[#ebebeb] text-[#222222] font-bold text-sm transition-transform duration-150 cursor-pointer flex-shrink-0 btn-cat">
+                Frappuccinos
             </button>
         </nav>
-        <!--menu categoria fim-->
-
-        <!-- Sushi -->
-        <div id="cat-sushis" class="categoria-conteudo">
-            <div class="text-left text-[#ca3c3f] text-[1.375rem] mt-12 mb-4 font-semibold">
-                Sushi
+        <div id="cat-cafes" class="categoria-conteudo">
+            <div class="text-left text-[#063600] text-[1.375rem] mt-8 mb-4 font-semibold px-[7.5%]">
+                Cafés
             </div>
 
-            <div>
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Combinado Sushi</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 125,00</div>
-                    <div class="text-xs text-[#999999] mt-1">10 Sashimis variados, 10 Urimakis filadélfia e 10 uramakis
-                    </div>
-                </div>
+            <div class="bg-[#ceddcc] p-[1.25rem] rounded-[2rem] shadow-[0_4px_6px_rgba(0,0,0,0.03)] hover:-translate-y-[5px] hover:shadow-[0_15px_20px_rgba(0,0,0,0.1)] transition-all duration-200 my-6 mx-auto text-left w-[85%]">
+                <div class="inline-block text-[1.125rem] font-bold">CARAMELO MACCHIATO</div>
+                <div class="text-[1.125rem] float-right text-[#063600] font-semibold">R$ 24,50</div>
+                <div class="text-[0.75rem] text-[#999999] mt-1">Leite vaporizado, um toque de baunilha, dose de espresso e cobertura de caramelo</div>            
+            </div>     
 
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Combinado Sushi Especial</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 115,00</div>
-                    <div class="text-xs text-[#999999] mt-1">10 Sashimis Variados, 10 uramakis Filadélfia e 10 Uramakis
-                    </div>
-                </div>
-
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Combinado Hot</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 99,00</div>
-                    <div class="text-xs text-[#999999] mt-1">1 temaki Filadélfia Médio, 10 uramakis Filadélfia e 10 hot
-                        Filadélfia</div>
-                </div>
-
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Combinado Yakissoba</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 89,00</div>
-                    <div class="text-xs text-[#999999] mt-1">1 temaki Filadélfia Médio, 10 uramakis Filadélfia e 10 hot
-                        Filadélfia</div>
-                </div>
+            <div class="bg-[#ceddcc] p-[1.25rem] rounded-[2rem] shadow-[0_4px_6px_rgba(0,0,0,0.03)] hover:-translate-y-[5px] hover:shadow-[0_15px_20px_rgba(0,0,0,0.1)] transition-all duration-200 my-6 mx-auto text-left w-[85%]">
+                <div class="inline-block text-[1.125rem] font-bold">CAPPUCCINO TRADICIONAL</div>            
+                <div class="text-[1.125rem] float-right text-[#063600] font-semibold">R$ 22,00</div>
+                <div class="text-[0.75rem] text-[#999999] mt-1">Espresso com leite cremoso</div>
+            </div>
+            
+            <div class="bg-[#ceddcc] p-[1.25rem] rounded-[2rem] shadow-[0_4px_6px_rgba(0,0,0,0.03)] hover:-translate-y-[5px] hover:shadow-[0_15px_20px_rgba(0,0,0,0.1)] transition-all duration-200 my-6 mx-auto text-left w-[85%]">
+                <div class="inline-block text-[1.125rem] font-bold">CAPPUCCINO BRIGADEIRO</div>            
+                <div class="text-[1.125rem] float-right text-[#063600] font-semibold">R$ 27,00</div>
+                <div class="text-[0.75rem] text-[#999999] mt-1">Espresso e leite cremoso com calda de brigadeiro e granulado de chocolate belga ao leite</div>
+            </div>
+            
+            <div class="bg-[#ceddcc] p-[1.25rem] rounded-[2rem] shadow-[0_4px_6px_rgba(0,0,0,0.03)] hover:-translate-y-[5px] hover:shadow-[0_15px_20px_rgba(0,0,0,0.1)] transition-all duration-200 my-6 mx-auto text-left w-[85%]">
+                <div class="inline-block text-[1.125rem] font-bold">CAPPUCCINO CHOCOLATE</div>            
+                <div class="text-[1.125rem] float-right text-[#063600] font-semibold">R$ 25,50</div>
+                <div class="text-[0.75rem] text-[#999999] mt-1">Calda de chocolate, espresso e leite cremoso, com deliciosa cobertura de chocolate e chocolate em pó</div>
             </div>
         </div>
 
-        <!-- bebidas -->
-        <div id="cat-bebidas" class="categoria-conteudo hidden">
-            <div class="text-left text-[#ca3c3f] text-[1.375rem] mt-12 mb-4 font-semibold">
-                Bebidas
+        <div id="cat-frappuccinos" class="categoria-conteudo hidden">
+            <div class="text-left text-[#063600] text-[1.375rem] mt-8 mb-4 font-semibold px-[7.5%]">
+                Frappuccinos
+            </div> 
+
+            <div class="bg-[#ceddcc] p-[1.25rem] rounded-[2rem] shadow-[0_4px_6px_rgba(0,0,0,0.03)] hover:-translate-y-[5px] hover:shadow-[0_15px_20px_rgba(0,0,0,0.1)] transition-all duration-200 my-6 mx-auto text-left w-[85%]">
+                <div class="inline-block text-[1.125rem] font-bold">SUPER MORANGO</div>            
+                <div class="text-[1.125rem] float-right text-[#063600] font-semibold">R$ 26,50</div>
+                <div class="text-[0.75rem] text-[#999999] mt-1">Sem café. Leite com calda de morango, batidos com gelo, finalizado com chantilly.</div>
             </div>
-
-            <div>
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Coca-Cola Lata</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 5,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Lata de Coca-Cola 300ml trincando de gelada</div>
-                </div>
-
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Guaraná Lata</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 5,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Guaraná 300ml trincando de gelada</div>
-                </div>
-
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Água sem gás</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 4,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Água sem gás 300ml</div>
-                </div>
+            
+            <div class="bg-[#ceddcc] p-[1.25rem] rounded-[2rem] shadow-[0_4px_6px_rgba(0,0,0,0.03)] hover:-translate-y-[5px] hover:shadow-[0_15px_20px_rgba(0,0,0,0.1)] transition-all duration-200 my-6 mx-auto text-left w-[85%]">
+                <div class="inline-block text-[1.125rem] font-bold">CARAMELO</div>            
+                <div class="text-[1.125rem] float-right text-[#063600] font-semibold">R$ 28,50</div>
+                <div class="text-[0.75rem] text-[#999999] mt-1">Opção com ou sem café. Café, leite e essência de caramelo, batidos com gelo, finalizado com chantilly e cobertura de caramelo.</div>
             </div>
-        </div>
-
-        <!-- temakis -->
-         <div id="cat-temakis" class="categoria-conteudo hidden">
-            <div class="text-left text-[#ca3c3f] text-[1.375rem] mt-12 mb-4 font-semibold">
-                Temakis
-            </div>
-
-            <div>
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Temaki de Salmão Completo</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 35,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Cubos de salmão fresco, cream cheese, cebolinha picada, arroz japonês (shari) e alga crocante (nori).
-                    </div>
-                </div>
-
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Temaki Hot (Empanado)</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 38,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Recheio de salmão com cream cheese, arroz e alga, tudo empanado e frito na farinha panko. Finalizado com molho tarê doce e gergelim torrado.
-                    </div>
-                </div>
-
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Temaki de Camarão Premium</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 42,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Camarões grandes empanados e fritos, cream cheese, cebolinha, arroz japonês e alga crocante.</div>
-                </div>
-
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Temaki de Atum Picante (Spicy Tuna)</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 36,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Cubos de atum fresco envolvidos numa deliciosa maionese picante (sriracha), cebolinho, sementes de sésamo torradas, arroz japonês (shari) e alga crocante (nori).</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- sobremesas -->
-         <div id="cat-sobremesas" class="categoria-conteudo hidden">
-            <div class="text-left text-[#ca3c3f] text-[1.375rem] mt-12 mb-4 font-semibold">
-                Sobremesas
-            </div>
-
-            <div>
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Hot Roll de Morango com Nutella</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 28,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Rolinho de arroz e alga empanado em farinha panko e frito, recheado com morangos frescos e coberto com creme de avelã (Nutella).
-                    </div>
-                </div>
-
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Mochi de Sorvete (2 unidades)</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 22,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Tradicional docinho japonês feito com uma massa de arroz glutinoso (mochi), recheado com sorvete artesanal bem gelado. (Sabores: Chá Verde, Baunilha ou Morango).
-                    </div>
-                </div>
-
-                <div class="pt-5 text-left w-full">
-                    <div class="inline-block text-[1.125rem] font-bold">Tempurá de Sorvete</div>
-                    <div class="text-xs text-[#ca3c3f] font-semibold mt-1">R$ 25,00</div>
-                    <div class="text-xs text-[#999999] mt-1">Uma bola de sorvete de creme envolta em uma massa leve de pão de ló, empanada e frita. Acompanha calda de chocolate.</div>
-                </div>
-            </div>
+            
+            <div class="bg-[#ceddcc] p-[1.25rem] rounded-[2rem] shadow-[0_4px_6px_rgba(0,0,0,0.03)] hover:-translate-y-[5px] hover:shadow-[0_15px_20px_rgba(0,0,0,0.1)] transition-all duration-200 my-6 mx-auto text-left w-[85%]">
+                <div class="inline-block text-[1.125rem] font-bold">BAUNILHA</div>
+                <div class="text-[1.125rem] float-right text-[#063600] font-semibold">R$ 29,00</div>
+                <div class="text-[0.75rem] text-[#999999] mt-1">Sem café. Versão clássica, com baunilha e leite, batidos com gelo, finalizado com chantilly.</div>
+            </div> 
         </div>
 
     </section>
 
-    <!-- ================= FOOTER ================= -->
-   <footer class="mt-24 text-center py-12 px-4 text-[0.875rem] text-white bg-[#333333]">
-        <h3 class="text-lg font-bold mb-2">Haruy Sushi</h3>
-        <p>📍 Rua Prof. Toledo, 500, centro - Sorocaba</p>
-        <p>📞 Whatsapp: (15) 99145-6699</p>
-        <p>🕛 Aberto todos os dias das 14h às 23h</p>
+    <footer class="mt-[6.25rem] w-auto text-center p-[3.125rem] text-[0.875rem] text-black bg-[#89a885]">
+        <h3 class="text-[1.17em] font-bold my-[1em]">Starbucks Coffee</h3>
+        <p class="m-[0.2rem] text-[#222222]">Rua Prof. Toledo, 500, centro - Sorocaba</p>
+        <p class="m-[0.2rem] text-[#222222]">WhatsApp: (15) 9999-1234</p>
+        <p class="m-[0.2rem] text-[#222222]">Aberto todos os dias das 14h às 23h</p>
     </footer>
 
     <a href="https://wa.me/5515991456699" target="_blank" class="fixed right-5 bottom-5">
-        <img src="./assets/images/whatsapp.png" alt="link-whatsapp" class="h-[3.25rem]">
+        <img src="assets/images/whatsapp.png" alt="link-whatsapp" class="w-10">
     </a>
 
+    <script>
+        const botoes = document.querySelectorAll('.btn-cat');
+        const conteudos = document.querySelectorAll('.categoria-conteudo');
 
-    <!-- script menu hamburguer -->
+        function mudarCategoria(cat){
+            // Mostra apenas a categoria selecionada
+            conteudos.forEach(div => {
+                div.id === 'cat-' + cat
+                ? div.classList.remove('hidden')
+                : div.classList.add('hidden');
+            });
+
+            // Atualiza estilo do botão ativo (verde escuro do tema Starbucks)
+            botoes.forEach(btn => {
+                if (btn.dataset.cat === cat) {
+                    btn.classList.add('bg-[#063600]', 'text-white');
+                    btn.classList.remove('bg-[#ebebeb]', 'text-[#222222]');
+                } else {
+                    btn.classList.remove('bg-[#063600]', 'text-white');
+                    btn.classList.add('bg-[#ebebeb]', 'text-[#222222]');
+                }
+            });
+        }
+
+        let startX = 0;
+        let startY = 0;
+
+        // Evento de cada botão
+        botoes.forEach(btn => {
+            // touchstart é disparado assim que o dedo toca a tela
+            btn.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                // aplica class tailwind para efeito de clique
+                btn.classList.add('scale-95', 'opacity-80');
+            });
+
+            // touchend quando tira o dedo da tela
+            btn.addEventListener('touchend', (e) => {
+                // remove efeito visual
+                btn.classList.remove('scale-95', 'opacity-80');
+                // ultima posição do dedo antes de levantar
+                const endX = e.changedTouches[0].clientX;
+                const endY = e.changedTouches[0].clientY;
+                // calcula distancia percorrida pelo dedo em pixels
+                const deltaX = Math.abs(endX - startX);
+                const deltaY = Math.abs(endY - startY);
+                // logica matematica: se moveu menos de 10px = clique intencional
+                if (deltaX < 10 && deltaY < 10) {
+                    mudarCategoria(btn.dataset.cat);
+                }
+            });
+
+            // touchcancel se o celular aparecer uma ligação ou notificação popup
+            btn.addEventListener('touchcancel', () => {
+                btn.classList.remove('scale-95', 'opacity-80');
+            });
+
+            // click para usuários desktop
+            btn.addEventListener('click', () => {
+                mudarCategoria(btn.dataset.cat);
+            });
+        });
+    </script>
+
     <script>
         const menuBtn = document.getElementById("menuBtn");
         const closeBtn = document.getElementById("closeBtn");
@@ -273,84 +237,6 @@
         closeBtn.addEventListener("click", () => {
             mobileMenu.style.right = "-100%";
         });
-    </script>
-
-    <!-- script botao categoria -->
-    <script>
-        const botoes = document.querySelectorAll('.btn-cat');
-        const conteudos = document.querySelectorAll('.categoria-conteudo');
-
-        function mudarCategoria(cat){
-            //mostra apenas a categoria seleconada
-            conteudos.forEach(div => {
-                div.id === 'cat-' + cat
-                ? div.classList.remove('hidden')
-                : div.classList.add('hidden');
-            });
-            //atualiza estilo do botao ativo
-            botoes.forEach(btn => {
-                if (btn.dataset.cat === cat) {
-                    btn.classList.add('bg-primary', 'text-white');
-                    btn.classList.remove('bg-[#ebebeb]', 'text-dark');
-                }else {
-                    btn.classList.remove('bg-primary', 'text-white');
-                    btn.classList.add('bg-[#ebebeb]', 'text-dark');
-                }
-            });
-        }
-        //adiciona eventos a cada botao
-        // botoes.forEach(btn => {
-        //     btn.addEventListener('touchstart', () => {
-        //         btn.classList.add('scale-95');
-        //         mudarCategoria(btn.dataset.cat);
-        //     });
-        //     btn.addEventListener('touchend', () => {
-        //         btn.classList.remove('scale-95');
-        //     });
-        //     btn.addEventListener('click', () => {
-        //         mudarCategoria(btn.dataset.cat);
-        //     });
-        // });
-
-
-        //ativa scroll suave para links internos
-        let startX = 0;
-        let startY = 0;
-
-        //evento de cada botao
-        botoes.forEach(btn => {
-            //touchstart é disparado assim que o dedo toca a tela
-            btn.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                //aplica class tailwind para efeito de clique
-                btn.classList.add('scale-95', 'opacity-80');
-            });
-            //touchend quando tira o dedo da tela
-            btn.addEventListener('touchend', (e) => {
-                //remove efeito visual
-                btn.classList.remove('scale-95', 'opacity-80');
-                //ultima posição do dedo antes de levantar
-                const endX = e.changedTouches[0].clientX;
-                const endY = e.changedTouches[0].clientY;
-                //calcula distancia percorrida pelo dedo em pixels
-                const deltaX = Math.abs(endX - startX);
-                const deltaY = Math.abs(endY - startY);
-                //logica matematica se moveu menos de 10px = clique intencional
-                if (deltaX < 10 && deltaY < 10) {
-                    mudarCategoria(btn.database.cat);
-                }
-            });
-            //touchcancel se o celular aparecer uma ligação ou notificação popup
-            btn.addEventListener('touchcancel', () => {
-                btn.classList.remove('scale-95', 'opacity-80');
-            });
-            //click para usuarios desktop
-            btn.addEventListener('click', () => {
-                mudarCategoria(btn.dataset.cat);
-            });
-        });
-
     </script>
 </body>
 </html>
